@@ -1,0 +1,74 @@
+// ============================================================================
+// Tooltip
+// ============================================================================
+.tooltip {
+  position: absolute;
+  background: linear-gradient(50deg,#6e00ff,#b0f);
+  border-radius: 8px;
+  color: white;
+  padding: 12px;
+  max-width: 180px;
+  font-size: 16px;
+  line-height: 130%;
+  text-align: center;
+  z-index: 30;
+
+  // ============================================================================
+  // Tooltip - arrow
+  // ============================================================================
+  &-arrow {
+    position: absolute;
+    z-index: -1;
+
+    [data-placement="bottom"] & {
+      top: -6px;
+    }
+
+    [data-placement="top"] & {
+      bottom: -16px;
+    }
+
+    [data-placement="left"] & {
+      right: -16px;
+    }
+
+    [data-placement="right"] & {
+      left: -16px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      [data-placement="bottom"] &,
+      [data-placement="top"] & {
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+      }
+
+      [data-placement="right"] &,
+      [data-placement="left"] & {
+        border-top: 6px solid transparent;
+        border-bottom: 6px solid transparent;
+      }
+
+      [data-placement="bottom"] & {
+        border-bottom: 6px solid rgba(#6e00ff, 0.9);
+      }
+
+      [data-placement="top"] & {
+        border-top: 6px solid rgba(#6e00ff, 0.9);
+      }
+
+      [data-placement="right"] & {
+        border-right: 6px solid rgba(#6e00ff, 0.9);
+      }
+
+      [data-placement="left"] & {
+        border-left: 6px solid rgba(#6e00ff, 0.9);
+      }
+    }
+  }
+}
