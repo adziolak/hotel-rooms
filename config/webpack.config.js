@@ -336,6 +336,11 @@ module.exports = function (webpackEnv) {
           babelRuntimeEntryHelpers,
           babelRuntimeRegenerator,
         ]),
+        new webpack.LoaderOptionsPlugin({
+          options: {
+            disableHostCheck: true
+          }
+        })
       ],
     },
     module: {
@@ -752,7 +757,6 @@ module.exports = function (webpackEnv) {
     ].filter(Boolean),
     // Turn off performance processing because we utilize
     // our own hints via the FileSizeReporter
-    performance: false,
-    disableHostCheck: true
+    performance: false    
   };
 };
