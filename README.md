@@ -1,46 +1,105 @@
-# Getting Started with Create React App
+# Hotel Rooms App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This simple React application, written in TypeScript, displays a list of hotel rooms fetched from a given API and allows users to check the availability and price differences of these rooms. 
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+1. Fetches the rooms list from a provided API endpoint.
+2. Displays the rooms list sorted by price.
+3. Allows checking rooms availability through custom dropdown
+4. Shows the availability status for each room (available, onRequest, soldout, or error).
+5. Displays the price difference (original vs. checked one).
+6. Includes a "Book" button that is only enabled for available rooms and logs the selected room info to the browser console upon clicking.
 
-### `npm start`
+## Getting Started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+To get a local copy up and running, follow these simple steps.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Prerequisites
+- Node.js installed on your machine.
+- A package manager like npm (comes with **Node.js**) or **Yarn**.
 
-### `npm test`
+## Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Using Node.js
 
-### `npm run build`
+1. Clone the repo
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+`git clone https://github.com/adziolak/hotel-rooms.git`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. Navigate to the project directory
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+`cd hotel-rooms`
 
-### `npm run eject`
+3. Install NPM packages
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+`npm install`
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+or if you're using **Yarn**,
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+`yarn install`
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+4. Running the Application
 
-## Learn More
+To run the application locally:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+`npm start`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+or if you're using **Yarn**,
+
+`yarn start`
+
+### Using Docker
+
+This application also supports Docker, providing a seamless way to build, run, and manage the application containers. Docker ensures that the application runs identically in any environment, from a developer's local machine to a production server.
+
+#### Prerequisites
+
+- Docker installed on your machine. For installation instructions, visit Docker's official website.
+- Building the Docker Image
+- To build a Docker image for the application, run the following command in the project's root directory:
+
+`docker build -t hotel-rooms .`
+
+##### Running the Application in a Docker Container
+
+After building the image, you can run the application inside a Docker container using:
+
+`docker run -p 3000:3000 hotel-rooms-display`
+
+##### Stopping the Container
+To stop the running container, you can use the Docker CLI to list the running containers, find the container ID for your application, and then stop it: 
+
+`docker ps`
+`docker stop <container_id>`
+
+Replace <container_id> with the actual container ID from the output of docker ps.
+
+#### Running the Application with Docker Compose
+
+1. Build you application using, run the following command from the root of your project:
+
+`docker-compose build` 
+
+2. Start the application using Docker Compose"
+
+`docker-compose up`
+
+This command builds (if necessary), (re)creates, starts, and attaches to containers for a service. If you want to run in detached mode, use the -d flag:
+
+`docker-compose up -d`
+
+3. Stopping the Application
+
+To stop your application and remove the containers, networks, or volumes it defines, run:
+
+`docker-compose down`
+
+## Usage
+
+1. Upon launching the application, you'll see a list of hotel rooms sorted by price.
+2. Interact with the custom dropdown
+3. The availability status and any price differences will be displayed alongside each room.
+4. You can use the "Book" button to attempt booking a room. If the room is available, the room's information will be logged to the console.
+5. If the room is not available you will see a toast
+
