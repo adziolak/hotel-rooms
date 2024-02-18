@@ -335,12 +335,7 @@ module.exports = function (webpackEnv) {
           babelRuntimeEntry,
           babelRuntimeEntryHelpers,
           babelRuntimeRegenerator,
-        ]),
-        new webpack.LoaderOptionsPlugin({
-          options: {
-            disableHostCheck: true
-          }
-        })
+        ])
       ],
     },
     module: {
