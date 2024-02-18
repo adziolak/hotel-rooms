@@ -66,7 +66,7 @@ This application also supports Docker, providing a seamless way to build, run, a
 
 After building the image, you can run the application inside a Docker container using:
 
-`docker run -p 3000:3000 hotel-rooms-display`
+`docker run -p 3000:3000 hotel-rooms`
 
 ##### Stopping the Container
 To stop the running container, you can use the Docker CLI to list the running containers, find the container ID for your application, and then stop it: 
