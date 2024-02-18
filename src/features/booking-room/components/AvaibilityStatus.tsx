@@ -64,7 +64,7 @@ const AvaibilityStatus: FC<Props> = ({
     const handleMouseEnter = () => setVisible(true);
 
     return (
-        <div className={classNames("flex-none rounded-full p-1", bgColor)} onMouseLeave={handleMouseLeave} onMouseEnter={handleMouseEnter} ref={setRef}>
+        <div className={classNames("rounded-full p-1 mb-auto mt-1", bgColor)} onMouseLeave={handleMouseLeave} onMouseEnter={handleMouseEnter} ref={setRef}>
             <div className={classNames("h-1.5 w-1.5 rounded-full", color)}></div>
             {description ?
                 <Tooltip target={ref} isVisible={isVisible} message={description} onHide={() => setVisible(false)} /> : null 

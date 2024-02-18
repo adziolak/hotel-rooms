@@ -62,8 +62,8 @@ const BookingForm: FC = () => {
             "rounded-full mt-3 lg:mt-4 relative")
         }>            
             <fieldset className={classNames(
-                "flex justify-between relative z-20", 
-                show && "border-b border-solid border-indigo-200")
+                "relative z-20 booking-dropdown", 
+                show && "border-b border-solid border-indigo-200")                                
             }>
                 <RoomsDropdown 
                     show={show}

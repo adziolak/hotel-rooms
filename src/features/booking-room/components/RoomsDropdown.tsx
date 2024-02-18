@@ -45,7 +45,7 @@ const RoomsDropdown: FC<Props> = ({
                         disabled={disabled || loading} 
                         className="pl-4 w-full text-left font-semibold flex justify-between items-center relative"
                         >
-                        <span className="text-purple-900 opacity-75">{title}</span>
+                        <span className="text-purple-900 opacity-75 whitespace-nowrap text-ellipsis overflow-hidden">{title}</span>
                         <IconCaretBottom width={16} className="text-gray-900" />
                     </Button>
                 )}                

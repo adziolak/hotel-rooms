@@ -5,7 +5,11 @@ module.exports = {
     extend: {
       colors: {
         'white': '#ffffff',
-      }
+      },
+      screens: {
+        'xs': '414px',
+        'sm': '600px'
+      },
     },
   },
   plugins: [

@@ -26,7 +26,7 @@ const RoomPriceDifference: FC<Props> = ({
     }
 
     return (
-        <p className="text-sm text-gray-500 font-medium ml-6">
+        <p className="text-sm text-gray-500 font-medium ml-6 text-left">
             <span>The difference between original and checked price: </span> 
             <b className="text-md text-gray-900 font-bold">{price} {checkedPrice.currencyCode}</b>
         </p>        

@@ -9,13 +9,13 @@ const RoomItem: FC<Room> = ({
     price
 }) => {
     return (
-        <div className="flex justify-between items-center min-h-14">            
-            <div className="flex flex-col items-center justify-start">
-                <div className="flex items-center mr-auto">
+        <div className="xs:flex justify-between items-center min-h-14">            
+            <div className="flex flex-col items-start justify-start">
+                <div className="flex items-center mr-auto w-full">
                     {availability ?
                         <AvaibilityStatus status={availability.availabilityStatus} /> : null
                     }
-                    <h3 className="text-base font-semibold leading-7 text-gray-900 ml-2 mr-auto">
+                    <h3 className="text-base font-semibold leading-6 text-gray-900 ml-2 mr-auto text-left">
                         {name}
                     </h3>
                 </div>
@@ -25,7 +25,7 @@ const RoomItem: FC<Room> = ({
                 }
             </div>
             {price ?
-                <p className="text-lg text-indigo-800 font-bold">{price.value} {price.currencyCode}</p> : null 
+                <p className="text-lg text-indigo-800 font-bold whitespace-nowrap ml-6 xs:ml-3 text-left">{price.value} {price.currencyCode}</p> : null 
             }
         </div>          
     );
