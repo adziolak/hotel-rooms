@@ -16,6 +16,7 @@ This simple React application, written in TypeScript, displays a list of hotel r
 To get a local copy up and running, follow these simple steps.
 
 ## Prerequisites
+
 - Node.js installed on your machine.
 - A package manager like npm (comes with **Node.js**) or **Yarn**.
 
@@ -101,5 +102,16 @@ To stop your application and remove the containers, networks, or volumes it defi
 2. Interact with the custom dropdown
 3. The availability status and any price differences will be displayed alongside each room.
 4. You can use the "Book" button to attempt booking a room. If the room is available, the room's information will be logged to the console.
-5. If the room is not available you will see a toast
+5. If the room is not available you will see message displaing in a toast
+
+## Live Demo
+
+Experience the Hotel Rooms App in action! A live demo of the application is available to help you explore its features without the need to set it up locally. 
+
+### Accessing the Demo
+You can access the live demo by visiting the following URL:
+
+[Demo](https://master.d3up2as7y7imnt.amplifyapp.com/)
+
+
 
