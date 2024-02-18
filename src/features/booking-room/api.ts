@@ -21,7 +21,7 @@ const roomsAvaibilityAdapter = createEntityAdapter<RoomAvalibility>();
 
 export const roomsApi = createApi({
   reducerPath: "roomsApi",
-  baseQuery: fetchBaseQuery({ baseUrl: "/shared/dev/test-api/" }),
+  baseQuery: fetchBaseQuery({ baseUrl: "https://dcontent.inviacdn.net/shared/dev/test-api/" }),
   endpoints: (builder) => ({
     getRooms: builder.query<EntityState<Room, number>, void>({
       query: () => 'rooms',     
